@@ -11,7 +11,7 @@ namespace Task4._3
             Console.WriteLine($"Число: {number}");
         }
 
-        static void ConvertToInt(ref int number)
+        static int GetInt(ref int number)
         {
             bool isWork = true;
             Console.WriteLine("Введите число");
@@ -30,6 +30,8 @@ namespace Task4._3
                     Console.WriteLine("Число введено некорректно");
                 }
             }
+
+            return number;
         }
     }
 }
