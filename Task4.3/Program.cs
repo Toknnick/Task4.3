@@ -6,13 +6,12 @@ namespace Task4._3
     {
         static void Main(string[] args)
         {
-            int number = 0;
-            ConvertToInt(ref  number);
-            Console.WriteLine($"Число: {number}");
+            GetInt();
         }
 
-        static int GetInt(ref int number)
+        static int GetInt()
         {
+            int number = 0;
             bool isWork = true;
             Console.WriteLine("Введите число");
             bool isRightInput = true;
@@ -20,7 +19,7 @@ namespace Task4._3
             while (isWork)
             {
                 string userInput = Console.ReadLine();
-                isRightInput = int.TryParse(userInput, out  number);
+                isRightInput = int.TryParse(userInput, out number);
                 if (isRightInput == true)
                 {
                     isWork = false;
@@ -31,6 +30,7 @@ namespace Task4._3
                 }
             }
 
+            Console.WriteLine($"Число: {number}");
             return number;
         }
     }
